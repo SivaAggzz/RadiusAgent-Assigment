@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="option"
+            type="com.sde.assigment.models.Option" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/csb_bg"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            app:iconName="@{option.icon}"
+            app:tint="@color/btn_icon_tint"
+            android:id="@+id/icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/apartment" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/icon"
+            android:fontFamily="@font/plus_jakarta_sans_500"
+            android:includeFontPadding="false"
+            android:text="@{option.name}"
+            android:textColor="@color/btn_txt_color" />
+
+    </RelativeLayout>
+</layout>

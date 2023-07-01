@@ -1,0 +1,24 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="option"
+            type="com.sde.assigment.models.Option" />
+
+        <variable
+            name="callback"
+            type="com.sde.assigment.components.selectableBox.CustomSelectableBoxSelectionCallback" />
+
+    </data>
+
+    <com.sde.assigment.components.selectableButton.CustomSelectableButton xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/custom_selectable_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkable="true"
+        android:textColor="@color/btn_txt_color"
+        app:setupOnClick="@{callback}"
+        app:setupOption="@{option}" />
+
+</layout>
