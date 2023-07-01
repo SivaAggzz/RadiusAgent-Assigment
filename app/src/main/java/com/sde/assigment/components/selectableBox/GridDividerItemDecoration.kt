@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-internal class GridDividerItemDecoration( val spacing: Int) : RecyclerView.ItemDecoration() {
+internal class GridDividerItemDecoration(private val spacing: Int) : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(
         outRect: Rect,
@@ -24,20 +24,20 @@ internal class GridDividerItemDecoration( val spacing: Int) : RecyclerView.ItemD
         outRect.bottom = 0
     }
 
-    fun isInTheFirstRow(position: Int, totalSpanCount: Int): Boolean =
+    private fun isInTheFirstRow(position: Int, totalSpanCount: Int): Boolean =
         position < totalSpanCount
 
-    fun isFirstInRow(position: Int, totalSpanCount: Int, spanSize: Int): Boolean =
+    private fun isFirstInRow(position: Int, totalSpanCount: Int, spanSize: Int): Boolean =
         if (totalSpanCount != spanSize) {
             position % totalSpanCount == 0
         } else true
 
-    fun isLastInRow(position: Int, totalSpanCount: Int, spanSize: Int): Boolean =
+    private fun isLastInRow(position: Int, totalSpanCount: Int, spanSize: Int): Boolean =
         isFirstInRow(position + 1, totalSpanCount, spanSize)
 
-    fun getTotalSpanCount(parent: RecyclerView): Int =
+    private fun getTotalSpanCount(parent: RecyclerView): Int =
         (parent.layoutManager as? GridLayoutManager)?.spanCount ?: 1
 
-    fun getItemSpanSize(parent: RecyclerView, position: Int): Int =
+    private fun getItemSpanSize(parent: RecyclerView, position: Int): Int =
         (parent.layoutManager as? GridLayoutManager)?.spanSizeLookup?.getSpanSize(position) ?: 1
 }

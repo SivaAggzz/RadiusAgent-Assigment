@@ -3,7 +3,6 @@ package com.sde.assigment.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import io.realm.kotlin.types.RealmObject
 
 data class FacilitiesAndExclusionsModel(
     @SerializedName("facilities") var facilities: List<Facility> = arrayListOf(),

@@ -15,9 +15,9 @@ import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class DataManager @Inject constructor(
-    var facilitiesTask: FacilitiesTask,
-    var dbManager: RoomDBManager,
-    var compositeDisposable: CompositeDisposable
+    private var facilitiesTask: FacilitiesTask,
+    private var dbManager: RoomDBManager,
+    private var compositeDisposable: CompositeDisposable
 )  {
     fun loadDataFromAPI(apiCallback: ApiCallback) {
         facilitiesTask.getFacilities(object : Callback<FacilitiesAndExclusionsModel> {

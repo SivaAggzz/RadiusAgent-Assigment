@@ -1,16 +1,10 @@
 package com.sde.assigment.home
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.sde.assigment.adapters.HomeFacilitiesAdapter
 import com.sde.assigment.databinding.ActivityHomeBinding
-import com.sde.assigment.models.Exclusion
 import com.sde.assigment.models.FacilitiesAndExclusionsModel
-import com.sde.assigment.models.Option
-import com.sde.assigment.utils.showToast
 
 class HomeActivity : AppCompatActivity(), HomeContract.View {
     private lateinit var viewBinding: ActivityHomeBinding

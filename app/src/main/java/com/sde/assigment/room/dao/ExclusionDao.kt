@@ -4,8 +4,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.sde.assigment.models.Exclusion
-import com.sde.assigment.models.Facility
-import io.reactivex.Single
 
 @Dao
 interface ExclusionDao {

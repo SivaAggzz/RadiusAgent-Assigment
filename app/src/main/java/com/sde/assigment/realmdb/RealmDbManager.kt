@@ -1,12 +1,5 @@
 package com.sde.assigment.realmdb
 
-import com.sde.assigment.data.interfaces.DBInterface
-import com.sde.assigment.models.Exclusion
-import com.sde.assigment.models.Facility
-import io.realm.kotlin.Realm
-import io.realm.kotlin.query.RealmResults
-import javax.inject.Inject
-
 /*
 class RealmDbManager @Inject constructor(private val realm: Realm): DBInterface {
     override fun getAllFacilities(): List<Facility> {

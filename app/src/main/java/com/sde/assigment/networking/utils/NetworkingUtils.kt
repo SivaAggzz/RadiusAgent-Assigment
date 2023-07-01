@@ -6,7 +6,7 @@ import com.sde.assigment.networking.api.ApiService
 import retrofit2.Retrofit
 import javax.inject.Inject
 
-class NetworkingUtils @Inject constructor(private val retrofit: Retrofit,private val context: Context) {
+class NetworkingUtils @Inject constructor(private val retrofit: Retrofit, context: Context) {
     init {
         getInjector(context).inject(this)
     }

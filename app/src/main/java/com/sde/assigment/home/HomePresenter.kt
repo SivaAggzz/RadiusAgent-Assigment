@@ -69,8 +69,8 @@ class HomePresenter(private val mView: HomeContract.View) : HomeContract.Present
         message.showToast(mView as Context)
     }
 
-    override fun onFetchSuccess(facilities: List<Facility>, exclusions: List<Exclusion>) {
-        Log.e(tag, "onFetchSuccess Success: facilities : ${facilities.size} ,exclusions : ${exclusions.size}")
+    override fun onFetchSuccess(facilities: List<Facility>?, exclusions: List<Exclusion>?) {
+        Log.e(tag, "onFetchSuccess Success: facilities : ${facilities?.size} ,exclusions : ${exclusions?.size}")
         if (!facilities.isNullOrEmpty() && !exclusions.isNullOrEmpty()) {
             val model = FacilitiesAndExclusionsModel(facilities, arrayListOf(exclusions))
             mView.loadRecyclerViewData(model)

@@ -1,6 +1,5 @@
 package com.sde.assigment.home
 
-import android.content.Context
 import com.sde.assigment.models.FacilitiesAndExclusionsModel
 
 interface HomeContract {

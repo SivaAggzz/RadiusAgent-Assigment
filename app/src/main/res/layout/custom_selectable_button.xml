@@ -16,6 +16,7 @@
         android:padding="10dp">
 
         <ImageView
+            android:contentDescription="@string/option_icon"
             app:iconName="@{option.icon}"
             app:tint="@color/btn_icon_tint"
             android:id="@+id/icon"
